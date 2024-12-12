@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <metapack>
+                <active>0</active>
+                <title>Metapack</title>
+                <name>Delivery</name>
+                <sallowspecific>0</sallowspecific>
+                <price>0</price>
+                <sort_order>100</sort_order>
+                <model>GraphCommerce\Metapack\Model\Carrier\Delivery</model>
+            </metapack>
+        </carriers>
+    </default>
+</config>
