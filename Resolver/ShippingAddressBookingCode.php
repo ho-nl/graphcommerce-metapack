@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace GraphCommerce\Metapack\Resolver;
 
+use GraphCommerce\Metapack\Plugin\LoadBookingCodeForQuoteAddress;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\GraphQl\Config\Element\Field;
 use Magento\Framework\GraphQl\Query\ResolverInterface;
@@ -27,6 +28,11 @@ class ShippingAddressBookingCode implements ResolverInterface
 
         if ($address->getExtensionAttributes()) {
             $bookingCode = $address->getExtensionAttributes()->getMetapackBookingCode();
+        }
+
+        if (!$bookingCode) {
+            // Load after saving new value with setShippingAddressesOnCart mutation
+            $bookingCode = $address->getData(LoadBookingCodeForQuoteAddress::METAPACK_BOOKING_CODE);
         }
 
         return $bookingCode;

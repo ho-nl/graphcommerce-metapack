@@ -7,4 +7,7 @@
     <type name="Magento\Quote\Model\ResourceModel\Quote\Address\Collection">
         <plugin name="graphCommerceMetapackLoadBookingCodeForQuoteAddress" type="GraphCommerce\Metapack\Plugin\LoadBookingCodeForQuoteAddress" />
     </type>
+    <type name="Magento\QuoteGraphQl\Model\Resolver\SetShippingAddressesOnCart">
+        <plugin name="graphCommerceMetapackSaveBookingCodeAtShippingAddress" type="GraphCommerce\Metapack\Plugin\SaveBookingCodeAtShippingAddress" />
+    </type>
 </config>
