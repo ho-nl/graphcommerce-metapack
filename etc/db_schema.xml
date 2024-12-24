@@ -9,4 +9,8 @@
         <column xsi:type="varchar" name="metapack_booking_code" nullable="true" length="255"
                 comment="Metapack Booking Code"/>
     </table>
+    <table name="sales_order_address">
+        <column xsi:type="varchar" name="metapack_booking_code" nullable="true" length="255"
+                comment="Metapack Booking Code"/>
+    </table>
 </schema>
