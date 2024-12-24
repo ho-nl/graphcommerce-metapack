@@ -1,5 +1,5 @@
 extend input ShippingAddressInput {
-    metapack_booking_code: String @doc(description: "@todo")
+    metapack_booking_code: String @doc(description: "Metapack Booking Code")
 }
 
 extend type ShippingCartAddress {
