@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © Reach Digital (https://www.reachdigital.io/)
+  ~ See LICENSE.txt for license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Quote\Model\ResourceModel\Quote\Address\Collection">
+        <plugin name="graphCommerceMetapackLoadBookingCodeForQuoteAddress" type="GraphCommerce\Metapack\Plugin\LoadBookingCodeForQuoteAddress" />
+    </type>
+    <type name="Magento\QuoteGraphQl\Model\Resolver\SetShippingAddressesOnCart">
+        <plugin name="graphCommerceMetapackSaveBookingCodeAtShippingAddress" type="GraphCommerce\Metapack\Plugin\SaveBookingCodeAtShippingAddress" />
+    </type>
+</config>
